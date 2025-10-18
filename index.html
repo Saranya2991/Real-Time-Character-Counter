@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Real Time Character Counter</h1>
+        <textarea id="message" placeholder="Enter Your Message..." maxlength="200"></textarea>
+        <div class="counter">
+            <div id="count">0/200 Characters.</div>
+            <div id="remaining" input="update()"></div>
+        </div>
+    </div>
+    <script>
+        const message = document.getElementById("message");
+        const count = document.getElementById("count");
+        const maxChars = 200;
+        message.addEventListener("input", () => {
+            update();
+        })
+        update();
+        function update() {
+            const typed = message.value.length;
+            count.innerHTML = typed + "/ 200 Characters."
+            remaining.innerHTML = message.getAttribute("maxLength") - typed;
+            remaining.textContent = "Remaining :" + remaining.innerHTML
+
+            if (typed == maxChars) {
+                alert("Your Character Limit is Exceed.")
+            }
+        }
+
+    </script>
+</html>

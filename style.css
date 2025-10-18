@@ -1,0 +1,25 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 60%;
+    
+}
+.container{
+    background-color: rgb(216, 192, 239);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 30px;
+    padding: 50px;
+    width: 500px;
+    height: 350px;
+    
+    
+}
+textarea{
+padding-bottom: 100px;
+padding-right: 150px;
+}
+.counter{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    color: red;
+}
